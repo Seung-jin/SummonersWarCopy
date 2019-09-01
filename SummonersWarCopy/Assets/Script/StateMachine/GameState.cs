@@ -6,6 +6,8 @@ namespace LSJ
 {
     public class GameState
     {
+        protected int StateID = GameValue.InitInt;
+
         public virtual void Begin() { }
         public virtual void Update() { }
         public virtual void End() { }
