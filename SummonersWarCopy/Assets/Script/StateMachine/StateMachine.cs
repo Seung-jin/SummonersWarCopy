@@ -17,7 +17,9 @@ namespace LSJ
         public void ChangeState(int stateID)
         {
             BeforeState = CurrentState;
-            _gameStateMap[CurrentState].End();
+            if (CurrentState != GameValue.InitInt)
+                _gameStateMap[CurrentState].End();
+
             CurrentState = stateID;
             _gameStateMap[CurrentState].Begin();
         }

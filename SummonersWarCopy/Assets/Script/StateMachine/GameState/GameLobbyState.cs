@@ -2,12 +2,15 @@
 {
     public class GameLobbyState : GameState
     {
-        public StateMachine _gameStateMachine = null;
-
-        public GameLobbyState(StateMachine gameStateMachine)
+        public GameLobbyState( )
         {
-            _gameStateMachine = gameStateMachine;
             StateID = (int)SCENE_STATE.LOBBY;
+        }
+
+        public override void Begin()
+        {
+            base.Begin();
+            UnityEngine.Debug.Log("Lobby Begin");
         }
     }
 }
